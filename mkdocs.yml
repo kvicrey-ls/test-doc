@@ -1,0 +1,8 @@
+site_name: "Doc test"
+site_description: "Kevin"
+
+nav:
+  - Introduction: index.md
+
+plugins:
+  - techdocs-core
