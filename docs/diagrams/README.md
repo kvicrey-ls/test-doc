@@ -2,7 +2,7 @@
 title: Diagrams 2
 ---
 
-# Registration
+# Registration 2
 
 ```plantuml
 @startuml
