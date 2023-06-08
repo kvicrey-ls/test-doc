@@ -2,7 +2,7 @@
 title: Diagrams 2
 ---
 
-# Registration 344434434343r324
+# Registration 344434434343r3244
 
 ```plantuml
 @startuml
