@@ -9,7 +9,7 @@ group Registration from another Lightspeed Product
   note left of user
     User is logged into a Lightspeed Product
   end note
-  user->>int_client: Create account with <Integration Provider>
+  user->>int_client: Create2 account with <Integration Provider>
   $applicationInitiatedLogin()
   note over authls
     AuthLS has a session that
