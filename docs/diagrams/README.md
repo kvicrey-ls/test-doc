@@ -1,5 +1,5 @@
 ---
-title: Diagrams
+title: Diagrams 2
 ---
 
 # Registration
