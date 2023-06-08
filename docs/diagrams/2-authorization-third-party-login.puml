@@ -1,0 +1,38 @@
+@startuml
+
+!include ./includes/authorization_elements.iuml
+
+autonumber
+hide unlinked
+
+group Authorizing an application [[https://fireplace.lightspeed.app/docs-preview/62-lightspeed-id/master/20-integrating/10-external-authentication-provider docs]]
+  note left of user
+    A user is logged into one application,
+    but authorizing another application
+  end note
+  user->>int_client: Connect with <Integration Provider>
+  $applicationInitiatedLogin()
+  group User has no session allowed by Integration Client (allowed_realms)
+    $authentication()
+  end
+  authls->>int_client: Redirect to <redirect_uri>?code=<code>&state=<state>
+  activate int_client
+    $oidcCallback()
+    alt OIDC Callback Success
+      int_client->>int_provider: Use id_token `user` claim to assert authorization
+      int_client->>int_client: If scope includes offline_access:\nStore refresh_token
+      int_client->>int_client: Create application session
+      int_client->>user: User is taken to final destination (from the `state`)
+    end
+    alt OIDC Callback Failure
+      int_client->>user: Show error page, click here to login again [Step 1]\nImportant: set `prompt=login` in second authorization attempt
+    end
+    group Integration
+      int_client->>int_provider: Subsequent API calls using access_token
+      alt access_token expired
+        int_client->>authls: Get a new access token\nPOST <authls_domain>/oidc/token with grant_type=refresh_token
+      end
+    end
+  deactivate int_client
+end
+@enduml
