@@ -6,7 +6,7 @@ title: Diagrams 2
 
 ```plantuml
 @startuml
-!include ./registration.puml
+!include ./3-registration.puml
 @enduml
 ```
 
