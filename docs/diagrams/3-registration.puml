@@ -2,7 +2,7 @@
 
 !include ./includes/authorization_elements.iuml
 
-autonumber
+autonumber 
 hide unlinked
 
 group Registration from another Lightspeed Product
