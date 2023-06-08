@@ -1,15 +1,13 @@
 ---
-title: Diagrams 2
+title: Diagrams
 ---
 
-# Registration 344434434343r324422s
+# Registration 
 
 ```plantuml
 @startuml
 !include ./3-registration.puml
-
 @enduml
 ```
 
-![Drag Racing](Dragster.jpg)
 
