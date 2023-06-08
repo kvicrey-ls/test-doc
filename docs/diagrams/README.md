@@ -8,7 +8,6 @@ title: Diagrams 2
 @startuml
 !include ./3-registration.puml
 
-!include ./3-registration.puml
 @enduml
 ```
 
