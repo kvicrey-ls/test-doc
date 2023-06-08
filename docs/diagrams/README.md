@@ -2,7 +2,7 @@
 title: Diagrams 2
 ---
 
-# Registration 2 2
+# Registration 2 2 2
 
 ```plantuml
 @startuml
@@ -10,4 +10,5 @@ title: Diagrams 2
 @enduml
 ```
 
+![Drag Racing](Dragster.jpg)
 
